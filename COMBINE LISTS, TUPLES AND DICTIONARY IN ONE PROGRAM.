@@ -1,0 +1,18 @@
+# Create dictionary with tuples as values
+students_scores = {
+    "SHAHID": (85, 90, 80),
+    "FAISAL": (78, 88, 84),
+    "TAHIR": (92, 95, 89)
+}
+
+def average_scores(students):
+    for name, scores in students.items():
+        avg_score = sum(scores) / 3  
+        print(f"{name}'s average score: {avg_score:.2f}")
+
+def highest_average(students):
+    highest = max(students, key=lambda name: sum(students[name]) / 3)
+    print(f"Highest average score: {highest}")
+
+average_scores(students_scores)
+highest_average(students_scores)
